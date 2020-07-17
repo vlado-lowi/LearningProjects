@@ -1,0 +1,3 @@
+# LearningProjects
+Dummy projects created to learn stuff...
+WebQuizEngine is project from JetBrains Academy - https://hyperskill.org/projects/91
