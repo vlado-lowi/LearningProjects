@@ -2,8 +2,6 @@ package engine;
 
 import org.springframework.web.bind.annotation.*;
 
-import javax.websocket.server.PathParam;
-
 @RestController
 public class QuizController {
 
@@ -11,8 +9,8 @@ public class QuizController {
     }
 
     @GetMapping(path = "/api/quiz")
-    public Quiz getQuiz(){
-        return new Quiz();
+    public QuizWithAnswer getQuiz(){
+        return new QuizWithAnswer();
     }
 
     @PostMapping(path = "/api/quiz")

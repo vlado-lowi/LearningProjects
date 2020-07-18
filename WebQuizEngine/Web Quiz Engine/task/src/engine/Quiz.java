@@ -6,25 +6,40 @@ public class Quiz {
     private String title;
     private String text;
     private ArrayList<String> options = new ArrayList<>();
+    private int answer;
 
     public Quiz() {
-        title = "Tazka otazka!!!";
-        text = "Kolko je 2 * 2 ?";
-        options.add("Fuuha nekonecno ? ");
-        options.add("9");
-        options.add("4");
-        options.add("Vyplo ma! Moc silna matika....");
     }
 
     public String getTitle() {
         return title;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     public String getText() {
         return text;
     }
 
+    public void setText(String text) {
+        this.text = text;
+    }
+
     public ArrayList<String> getOptions() {
         return options;
+    }
+
+    public void setOptions(ArrayList<String> options) {
+        this.options = options;
+    }
+
+    public int getAnswer() {
+        return answer;
+    }
+
+    public void setAnswer(int answer) {
+        this.answer = answer;
     }
 }
