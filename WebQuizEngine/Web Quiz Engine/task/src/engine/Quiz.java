@@ -1,12 +1,17 @@
 package engine;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.ArrayList;
 
 public class Quiz {
     private String title;
     private String text;
     private ArrayList<String> options = new ArrayList<>();
+
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private int answer;
+    private int id;
 
     public Quiz() {
     }
@@ -41,5 +46,13 @@ public class Quiz {
 
     public void setAnswer(int answer) {
         this.answer = answer;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

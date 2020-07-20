@@ -1,6 +1,5 @@
 package engine;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
@@ -11,26 +10,24 @@ import java.util.concurrent.atomic.AtomicInteger;
 @RestController
 public class QuizzesController {
 
-    private Quizzes quizzes;
+    private ArrayList<Quiz> quizzes;
     private AtomicInteger atomicInteger;
 
-    @Autowired
-    public QuizzesController(Quizzes quizzes) {
-        this.quizzes = quizzes;
+    public QuizzesController() {
+        this.quizzes = new ArrayList<>();
         atomicInteger = new AtomicInteger();
     }
 
     @PostMapping(value = "/api/quizzes")
-    public QuizNoAnswer addQuiz(@RequestBody Quiz quiz) {
-        QuizWithAnswer newQuiz = new QuizWithAnswer(quiz, atomicInteger.getAndIncrement());
-        quizzes.getQuizWithAnswer().add(newQuiz);
-        quizzes.getqWithoutAnswer().add(new QuizNoAnswer(newQuiz));
-        return quizzes.getqWithoutAnswer().get(newQuiz.getId());
+    public Quiz addQuiz(@RequestBody Quiz quiz) {
+        quiz.setId(atomicInteger.getAndIncrement());
+        quizzes.add(quiz);
+        return quizzes.get(quizzes.size() - 1);
     }
 
     @PostMapping(value = "/api/quizzes/{id}/solve")
     public Response solveQuiz(@PathVariable int id, @RequestParam int answer) {
-        for (QuizWithAnswer quiz : quizzes.getQuizWithAnswer()) {
+        for (Quiz quiz : quizzes) {
             if (quiz.getId() == id) {
                 return new Response(quiz.getAnswer() == answer);
             }
@@ -39,13 +36,13 @@ public class QuizzesController {
     }
 
     @GetMapping(value = "/api/quizzes")
-    public ArrayList<QuizNoAnswer> getAllQuizzes(){
-        return quizzes.getqWithoutAnswer();
+    public ArrayList<Quiz> getAllQuizzes(){
+        return quizzes;
     }
 
     @GetMapping(value = "/api/quizzes/{id}")
-    public QuizNoAnswer getQuiz(@PathVariable int id) {
-        for (QuizNoAnswer quiz : quizzes.getqWithoutAnswer()) {
+    public Quiz getQuiz(@PathVariable int id) {
+        for (Quiz quiz : quizzes) {
             if (quiz.getId() == id) {
                 return quiz;
             }

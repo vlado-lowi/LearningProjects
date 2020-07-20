@@ -433,6 +433,18 @@ files:
     management.endpoints.web.exposure.include=*
     management.endpoint.shutdown.enabled=true
   learner_created: false
+- name: src/engine/Quizzes.java
+  visible: true
+  learner_created: true
+- name: src/engine/QuizNoAnswer.java
+  visible: true
+  learner_created: true
+- name: src/engine/QuizzesController.java
+  visible: true
+  learner_created: true
+- name: src/engine/QuizWithAnswer.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/91/stages/506/implement
 status: Unchecked
-record: -1
+record: 3
