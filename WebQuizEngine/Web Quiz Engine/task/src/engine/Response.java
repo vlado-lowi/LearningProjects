@@ -1,10 +1,20 @@
 package engine;
 
+import java.util.ArrayList;
+import java.util.Objects;
+
 public class Response {
     private boolean success;
     private String feedback;
 
-    public Response(boolean correctAnswer) {
+    public Response(ArrayList<Integer> answerList1, ArrayList<Integer> answerList2) {
+        boolean correctAnswer;
+        if ( (answerList1 == null || answerList1.isEmpty()) &&
+                (answerList2 == null || answerList2.isEmpty()) ) {
+            correctAnswer = true;
+        } else {
+            correctAnswer = Objects.equals(answerList1, answerList2);
+        }
         success = correctAnswer;
         feedback = correctAnswer ? "Congratulations, you're right!" :
                 "Wrong answer! Please, try again.";
