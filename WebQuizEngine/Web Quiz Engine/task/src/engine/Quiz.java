@@ -2,19 +2,29 @@ package engine;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.ArrayList;
+import java.util.Collections;
 
-public class Quiz {
+public class Quiz{
+    @NotEmpty
     private String title;
+    @NotEmpty
     private String text;
+
+    @Size(min = 2)
+    @NotNull
     private ArrayList<String> options = new ArrayList<>();
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    private int answer;
+    private ArrayList<Integer> answer;
     private int id;
 
     public Quiz() {
     }
+
 
     public String getTitle() {
         return title;
@@ -40,11 +50,12 @@ public class Quiz {
         this.options = options;
     }
 
-    public int getAnswer() {
+    public ArrayList<Integer> getAnswer() {
         return answer;
     }
 
-    public void setAnswer(int answer) {
+    public void setAnswer(ArrayList<Integer> answer) {
+        Collections.sort(answer);
         this.answer = answer;
     }
 
