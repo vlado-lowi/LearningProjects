@@ -2,25 +2,39 @@ package engine;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
 
+@Entity
 public class Quiz{
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
     @NotEmpty
     private String title;
     @NotEmpty
+    @Column(name = "question")
     private String text;
 
     @Size(min = 2)
     @NotNull
-    private ArrayList<String> options = new ArrayList<>();
+    @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
+    @JoinColumn(name = "QuizID", nullable = false)
+    private List<Options> options = new ArrayList<>();
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    private ArrayList<Integer> answer;
-    private int id;
+    @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
+    @JoinColumn(name = "QuizID", nullable = false)
+    private List<CorrectOption> answer;
+
 
     public Quiz() {
     }
@@ -43,27 +57,39 @@ public class Quiz{
     }
 
     public ArrayList<String> getOptions() {
-        return options;
+
+        return options.stream().map(Options::getOption).
+                collect(Collectors.toCollection(ArrayList::new));
     }
 
     public void setOptions(ArrayList<String> options) {
-        this.options = options;
+
+        this.options = options.stream().map(e -> {
+            Options option = new Options();
+            option.setOption(e);
+            return option;
+        }).collect(Collectors.toCollection(ArrayList::new));
     }
 
     public ArrayList<Integer> getAnswer() {
-        return answer;
+        return answer.stream().map(CorrectOption::getCorrectOption).
+                collect(Collectors.toCollection(ArrayList::new));
     }
 
     public void setAnswer(ArrayList<Integer> answer) {
         Collections.sort(answer);
-        this.answer = answer;
+        this.answer = answer.stream().map(e -> {
+            CorrectOption correctOption = new CorrectOption();
+            correctOption.setCorrectOption(e);
+            return correctOption;
+        }).collect(Collectors.toCollection(ArrayList::new));
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 }
