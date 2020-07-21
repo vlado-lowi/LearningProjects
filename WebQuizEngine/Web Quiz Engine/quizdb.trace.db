@@ -1,0 +1,3 @@
+2020-07-21 18:42:13 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM QUIZ CORRECT_OPTION QUIZ_OPTIONS[*]"; SQL statement:
+SELECT * FROM QUIZ CORRECT_OPTION QUIZ_OPTIONS [42000-200]
