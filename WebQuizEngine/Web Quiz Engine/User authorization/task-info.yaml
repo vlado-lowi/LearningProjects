@@ -627,6 +627,23 @@ files:
         compile("org.springframework.boot:spring-boot-starter-web")
     }
   learner_created: false
+- name: src/engine/WebQuizEngine.java
+  visible: true
+  text: |
+    package engine;
+
+    import org.springframework.boot.SpringApplication;
+    import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+    @SpringBootApplication
+    public class WebQuizEngine {
+
+        public static void main(String[] args) {
+            SpringApplication.run(WebQuizEngine.class, args);
+        }
+
+    }
+  learner_created: false
 - name: src/resources/application.properties
   visible: true
   text: |
@@ -634,39 +651,22 @@ files:
     management.endpoints.web.exposure.include=*
     management.endpoint.shutdown.enabled=true
   learner_created: false
-- name: src/engine/QuizCRUDRepository.java
-  visible: true
-  learner_created: true
-- name: src/engine/QuizzesController.java
-  visible: true
-  learner_created: true
-- name: src/engine/Quiz.java
-  visible: true
-  learner_created: true
-- name: src/engine/WebQuizEngine.java
-  visible: true
-  learner_created: true
-- name: src/engine/Options.java
-  visible: true
-  learner_created: true
-- name: src/engine/Answer.java
-  visible: true
-  learner_created: true
-- name: src/engine/CorrectOption.java
-  visible: true
-  learner_created: true
 - name: src/engine/User.java
   visible: true
   learner_created: true
-- name: src/engine/EmailValidator.java
+- name: src/engine/UserRepository.java
   visible: true
   learner_created: true
-- name: src/engine/PasswordEncoder.java
+- name: src/engine/MyWebSecurityConfigurerAdapter.java
   visible: true
   learner_created: true
-- name: src/engine/SecurityConfig.java
+- name: src/engine/HelperMethods.java
   visible: true
   learner_created: true
 feedback_link: https://hyperskill.org/projects/91/stages/508/implement
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations! Continue on <a href="https://hyperskill.org/projects/91/stages/508/implement">JetBrains
+    Academy</a>
+  time: Wed, 22 Jul 2020 18:41:31 UTC
 record: -1
