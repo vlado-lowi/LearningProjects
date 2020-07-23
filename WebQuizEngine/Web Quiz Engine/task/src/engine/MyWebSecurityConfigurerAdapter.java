@@ -30,7 +30,8 @@ public class MyWebSecurityConfigurerAdapter extends WebSecurityConfigurerAdapter
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable().authorizeRequests()
                 .antMatchers("/api/register").permitAll()
-                .antMatchers(HttpMethod.DELETE, "/api/quizzes/**").hasRole("USER")
+                .antMatchers("/api/quizzes").hasRole("USER")
+                .antMatchers( "/api/quizzes/**").hasRole("USER")
                 .anyRequest().permitAll()
                 .and()
             .httpBasic();

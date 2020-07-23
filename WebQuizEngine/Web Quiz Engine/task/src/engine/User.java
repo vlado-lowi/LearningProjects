@@ -20,10 +20,21 @@ public class User {
     @Column(nullable = false)
     private Boolean enabled;
 
+//    @OneToMany(mappedBy = "user")
+//    private List<Completions> completions = new ArrayList<>();
+
     public User() {
         this.enabled = Boolean.TRUE;
         this.authority = "ROLE_USER";
     }
+
+//    public List<Completions> getCompletions() {
+//        return completions;
+//    }
+//
+//    public void setCompletions(List<Completions> completions) {
+//        this.completions = completions;
+//    }
 
     public List<Quiz> getQuizzes() {
         return quizzes;
