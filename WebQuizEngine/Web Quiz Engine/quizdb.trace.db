@@ -2350,3 +2350,12 @@ SELECT email, pw_hash, enable FROM User where email = ? [42122-200]
 2020-07-22 18:35:07 jdbc[13]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "UAUTHORITIES" not found; SQL statement:
 SELECT * FROM UAUTHORITIES [42102-200]
+2020-07-23 12:55:58 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SEQUIZ[*] LECT * FROM COMPLETED_QUIZZES"; expected "SET, SAVEPOINT, SCRIPT, SHUTDOWN, SHOW"; SQL statement:
+SEQUIZ LECT * FROM COMPLETED_QUIZZES [42001-200]
+2020-07-23 14:35:14 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "ALER[*] TABLE COMPLETIONS DROP COLUMN USERID"; expected "ALTER, ANALYZE"; SQL statement:
+ALER TABLE completions DROP COLUMN USERID [42001-200]
+2020-07-23 14:35:33 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "COMPLETIONS[*]"; expected "COMMIT, CREATE, CALL, CHECKPOINT, COMMENT"; SQL statement:
+COMPLETIONS [42001-200]
