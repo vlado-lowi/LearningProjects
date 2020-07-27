@@ -1,0 +1,97 @@
+[1;31m
+Start test 1[0m
+Input the number of cards:
+> 2
+
+The card #0:
+> black
+The definition of the card #0:
+> white
+
+The card #1:
+> black
+
+The card "black" already exists. Try again:
+> red
+The definition of the card #1:
+> white
+The definition "white" already exists. Try again:
+> green
+Print the definition of "black":
+> white
+Correct answer.
+Print the definition of "red":
+> green
+Correct answer.
+[1;31m
+Start test 2[0m
+Input the number of cards:
+> 2
+
+The card #0:
+> a brother of one's parent
+The definition of the card #0:
+> uncle
+
+The card #1:
+5> a part of the body where the foot and the leg meet
+The definition of the card #1:
+> ankle
+Print the definition of "a brother of one's parent":
+> ankle
+"Wrong answer. The correct one is "uncle*", you've just written the definition of "2a part of the body where the foot and the leg meet".
+Print the definition of "2a part of the body where the foot and the leg meet":
+> ???
+"Wrong answer. The correct one is "ankle".
+[1;31m
+Start test 3[0m
+Input the number of cards:
+> 4
+
+The card #0:
+> c1
+The definition of the card #0:
+> d1
+
+The card #1:
+> c2
+The definition of the card #1:
+> d2
+
+The card #2:
+> c3
+The definition of the card #2:
+> d3
+
+The card #3:
+> c3
+
+The card "c3" already exists. Try again:
+> c2
+
+The card "c2" already exists. Try again:
+> c1
+
+The card "c1" already exists. Try again:
+> c4
+The definition of the card #3:
+> d2
+The definition "d2" already exists. Try again:
+> d3
+The definition "d3" already exists. Try again:
+> d1
+The definition "d1" already exists. Try again:
+> d4
+Print the definition of "c1":
+> d1
+Correct answer.
+Print the definition of "c2":
+> d1
+"Wrong answer. The correct one is "d2*", you've just written the definition of "c1".
+Print the definition of "c3":
+
+> d3 ddd3
+"Wrong answer. The correct one is "d3".
+Print the definition of "c4":
+> ???
+"Wrong answer. The correct one is "d4".
