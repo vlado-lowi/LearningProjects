@@ -1,91 +1,412 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="FlashcardsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-07-27T20:08:54" hostname="LAPTOP-JJMCNIVR" time="0.14">
+<testsuite name="FlashcardsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-07-28T17:27:40" hostname="LAPTOP-JJMCNIVR" time="0.272">
   <properties/>
-  <testcase name="start" classname="FlashcardsTest" time="0.14"/>
+  <testcase name="start" classname="FlashcardsTest" time="0.272"/>
   <system-out><![CDATA[?[1;31m
 Start test 1?[0m
-Input the number of cards:
-> 2
-The card #0:
+Input the action (add, remove, import, export, ask, exit):
+> add
+The card:
 > black
-The definition of the card #0:
+The definition:
 > white
-The card #1:
+The pair ("black":"white") has been added.
+Input the action (add, remove, import, export, ask, exit):
+> add
+The card:
 > black
-The card "black" already exists. Try again:
+The card "black" already exists.
+Input the action (add, remove, import, export, ask, exit):
+> add
+The card:
 > red
-The definition of the card #1:
+The definition:
 > white
-The definition "white" already exists. Try again:
-> green
+The definition "white" already exists.
+Input the action (add, remove, import, export, ask, exit):
+> ask
+How many times to ask?
+> 2
 Print the definition of "black":
 > white
 Correct answer.
-Print the definition of "red":
+Print the definition of "black":
 > green
-Correct answer.
+Wrong answer. The correct one is "white".
+Input the action (add, remove, import, export, ask, exit):
+> exit
+Bye bye!
 ?[1;31m
 Start test 2?[0m
-Input the number of cards:
-> 2
-The card #0:
+Input the action (add, remove, import, export, ask, exit):
+> add
+The card:
 > a brother of one's parent
-The definition of the card #0:
+The definition:
 > uncle
-The card #1:
+The pair ("a brother of one's parent":"uncle") has been added.
+Input the action (add, remove, import, export, ask, exit):
+> add
+The card:
 > a part of the body where the foot and the leg meet
-The definition of the card #1:
+The definition:
 > ankle
+The pair ("a part of the body where the foot and the leg meet":"ankle") has been added.
+Input the action (add, remove, import, export, ask, exit):
+> ask
+How many times to ask?
+> 6
 Print the definition of "a brother of one's parent":
 > ankle
 Wrong answer. The correct one is "uncle", you've just written the definition of "a part of the body where the foot and the leg meet".
 Print the definition of "a part of the body where the foot and the leg meet":
-> ???
+> ??
 Wrong answer. The correct one is "ankle".
+Print the definition of "a brother of one's parent":
+> uncle
+Correct answer.
+Print the definition of "a part of the body where the foot and the leg meet":
+> ankle
+Correct answer.
+Print the definition of "a brother of one's parent":
+> ??
+Wrong answer. The correct one is "uncle".
+Print the definition of "a brother of one's parent":
+> uncle
+Correct answer.
+Input the action (add, remove, import, export, ask, exit):
+> exit
+Bye bye!
 ?[1;31m
 Start test 3?[0m
-Input the number of cards:
-> 4
-The card #0:
-> c1
-The definition of the card #0:
-> d1
-The card #1:
-> c2
-The definition of the card #1:
-> d2
-The card #2:
-> c3
-The definition of the card #2:
-> d3
-The card #3:
-> c3
-The card "c3" already exists. Try again:
-> c2
-The card "c2" already exists. Try again:
-> c1
-The card "c1" already exists. Try again:
-> c4
-The definition of the card #3:
-> d2
-The definition "d2" already exists. Try again:
-> d3
-The definition "d3" already exists. Try again:
-> d1
-The definition "d1" already exists. Try again:
-> d4
-Print the definition of "c1":
-> d1
+Input the action (add, remove, import, export, ask, exit):
+> export
+File name:
+> capitals.txt
+0 cards have been saved.
+Input the action (add, remove, import, export, ask, exit):
+> export
+File name:
+> capitalsNew.txt
+0 cards have been saved.
+Input the action (add, remove, import, export, ask, exit):
+> exit
+Bye bye!
+?[1;31m
+Start test 4?[0m
+Input the action (add, remove, import, export, ask, exit):
+> import
+File name:
+> ghost_file.txt
+File not found.
+Input the action (add, remove, import, export, ask, exit):
+> exit
+Bye bye!
+?[1;31m
+Start test 5?[0m
+Input the action (add, remove, import, export, ask, exit):
+> add
+The card:
+> Great Britain
+The definition:
+> London
+The pair ("Great Britain":"London") has been added.
+Input the action (add, remove, import, export, ask, exit):
+> remove
+The card:
+> Wakanda
+Can't remove "Wakanda": there is no such card.
+Input the action (add, remove, import, export, ask, exit):
+> export
+File name:
+> capitals.txt
+1 cards have been saved.
+Input the action (add, remove, import, export, ask, exit):
+> import
+File name:
+> capitals.txt
+1 cards have been loaded.
+Input the action (add, remove, import, export, ask, exit):
+> ask
+How many times to ask?
+> 1
+Print the definition of "Great Britain":
+> London
 Correct answer.
-Print the definition of "c2":
-> d1
-Wrong answer. The correct one is "d2", you've just written the definition of "c1".
-Print the definition of "c3":
-> d3 ddd3
-Wrong answer. The correct one is "d3".
-Print the definition of "c4":
-> ???
-Wrong answer. The correct one is "d4".
+Input the action (add, remove, import, export, ask, exit):
+> export
+File name:
+> capitalsNew.txt
+1 cards have been saved.
+Input the action (add, remove, import, export, ask, exit):
+> exit
+Bye bye!
+?[1;31m
+Start test 6?[0m
+Input the action (add, remove, import, export, ask, exit):
+> import
+File name:
+> capitalsNew.txt
+1 cards have been loaded.
+Input the action (add, remove, import, export, ask, exit):
+> exit
+Bye bye!
+?[1;31m
+Start test 7?[0m
+Input the action (add, remove, import, export, ask, exit):
+> import
+File name:
+> capitalsNew.txt
+1 cards have been loaded.
+Input the action (add, remove, import, export, ask, exit):
+> add
+The card:
+> France
+The definition:
+> Paris
+The pair ("France":"Paris") has been added.
+Input the action (add, remove, import, export, ask, exit):
+> add
+The card:
+> Russia
+The definition:
+> Moscow
+The pair ("Russia":"Moscow") has been added.
+Input the action (add, remove, import, export, ask, exit):
+> remove
+The card:
+> Great Britain
+The card has been removed.
+Input the action (add, remove, import, export, ask, exit):
+> export
+File name:
+> capitalsNew.txt
+2 cards have been saved.
+Input the action (add, remove, import, export, ask, exit):
+> import
+File name:
+> capitalsNew.txt
+2 cards have been loaded.
+Input the action (add, remove, import, export, ask, exit):
+> ask
+How many times to ask?
+> 4
+Print the definition of "Russia":
+> London
+Wrong answer. The correct one is "Moscow".
+Print the definition of "Russia":
+> Paris
+Wrong answer. The correct one is "Moscow", you've just written the definition of "France".
+Print the definition of "Russia":
+> Moscow
+Correct answer.
+Print the definition of "France":
+> Paris
+Correct answer.
+Input the action (add, remove, import, export, ask, exit):
+> exit
+Bye bye!
+?[1;31m
+Start test 8?[0m
+Input the action (add, remove, import, export, ask, exit):
+> add
+The card:
+> Japan
+The definition:
+> Tokyo
+The pair ("Japan":"Tokyo") has been added.
+Input the action (add, remove, import, export, ask, exit):
+> add
+The card:
+> France
+The definition:
+> UpdateMeFromImport
+The pair ("France":"UpdateMeFromImport") has been added.
+Input the action (add, remove, import, export, ask, exit):
+> add
+The card:
+> Russia
+The definition:
+> UpdateMeFromImport2
+The pair ("Russia":"UpdateMeFromImport2") has been added.
+Input the action (add, remove, import, export, ask, exit):
+> import
+File name:
+> capitalsNew.txt
+2 cards have been loaded.
+Input the action (add, remove, import, export, ask, exit):
+> ask
+How many times to ask?
+> 3
+Print the definition of "France":
+> Tokyo
+Wrong answer. The correct one is "Paris", you've just written the definition of "Japan".
+Print the definition of "Russia":
+> Paris
+Wrong answer. The correct one is "Moscow", you've just written the definition of "France".
+Print the definition of "Russia":
+> Moscow
+Correct answer.
+Input the action (add, remove, import, export, ask, exit):
+> remove
+The card:
+> Japan
+The card has been removed.
+Input the action (add, remove, import, export, ask, exit):
+> remove
+The card:
+> Russia
+The card has been removed.
+Input the action (add, remove, import, export, ask, exit):
+> export
+File name:
+> capitalsNew.txt
+1 cards have been saved.
+Input the action (add, remove, import, export, ask, exit):
+> exit
+Bye bye!
+?[1;31m
+Start test 9?[0m
+Input the action (add, remove, import, export, ask, exit):
+> add
+The card:
+> France
+The definition:
+> UpdateMeFromImport
+The pair ("France":"UpdateMeFromImport") has been added.
+Input the action (add, remove, import, export, ask, exit):
+> import
+File name:
+> capitalsNew.txt
+1 cards have been loaded.
+Input the action (add, remove, import, export, ask, exit):
+> ask
+How many times to ask?
+> 1
+Print the definition of "France":
+> UpdateMeFromImport
+Wrong answer. The correct one is "Paris".
+Input the action (add, remove, import, export, ask, exit):
+> exit
+Bye bye!
+?[1;31m
+Start test 10?[0m
+Input the action (add, remove, import, export, ask, exit):
+> add
+The card:
+> a
+The definition:
+> 1
+The pair ("a":"1") has been added.
+Input the action (add, remove, import, export, ask, exit):
+> add
+The card:
+> b
+The definition:
+> 2
+The pair ("b":"2") has been added.
+Input the action (add, remove, import, export, ask, exit):
+> add
+The card:
+> c
+The definition:
+> 3
+The pair ("c":"3") has been added.
+Input the action (add, remove, import, export, ask, exit):
+> add
+The card:
+> b
+The card "b" already exists.
+Input the action (add, remove, import, export, ask, exit):
+> add
+The card:
+> c
+The card "c" already exists.
+Input the action (add, remove, import, export, ask, exit):
+> add
+The card:
+> d
+The definition:
+> 4
+The pair ("d":"4") has been added.
+Input the action (add, remove, import, export, ask, exit):
+> remove
+The card:
+> c
+The card has been removed.
+Input the action (add, remove, import, export, ask, exit):
+> remove
+The card:
+> xxxx
+Can't remove "xxxx": there is no such card.
+Input the action (add, remove, import, export, ask, exit):
+> add
+The card:
+> c
+The definition:
+> 5
+The pair ("c":"5") has been added.
+Input the action (add, remove, import, export, ask, exit):
+> add
+The card:
+> new card
+The definition:
+> 4
+The definition "4" already exists.
+Input the action (add, remove, import, export, ask, exit):
+> add
+The card:
+> f
+The definition:
+> 5
+The definition "5" already exists.
+Input the action (add, remove, import, export, ask, exit):
+> remove
+The card:
+> c
+The card has been removed.
+Input the action (add, remove, import, export, ask, exit):
+> remove
+The card:
+> d
+The card has been removed.
+Input the action (add, remove, import, export, ask, exit):
+> ask
+How many times to ask?
+> 7
+Print the definition of "a":
+> 1
+Correct answer.
+Print the definition of "a":
+> 2
+Wrong answer. The correct one is "1", you've just written the definition of "b".
+Print the definition of "a":
+> 3
+Wrong answer. The correct one is "1".
+Print the definition of "a":
+> 4
+Wrong answer. The correct one is "1".
+Print the definition of "b":
+> 3
+Wrong answer. The correct one is "2".
+Print the definition of "b":
+> 2
+Correct answer.
+Print the definition of "b":
+> 1
+Wrong answer. The correct one is "2", you've just written the definition of "a".
+Input the action (add, remove, import, export, ask, exit):
+> ask
+How many times to ask?
+> 1
+Print the definition of "b":
+> 2
+Correct answer.
+Input the action (add, remove, import, export, ask, exit):
+> exit
+Bye bye!
 ]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+  <system-err><![CDATA[Error while trying to import cards from file: 'ghost_file.txt'.
+Error msg: ghost_file.txt (The system cannot find the file specified)
+]]></system-err>
 </testsuite>
