@@ -6,6 +6,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Flashcards/task/Flashcards-task.iml" filepath="$PROJECT_DIR$/.idea/modules/Flashcards/task/Flashcards-task.iml" group="FlashCards/Flashcards-task" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Flashcards/task/Flashcards-task_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Flashcards/task/Flashcards-task_main.iml" group="FlashCards/Flashcards-task" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Flashcards/task/Flashcards-task_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Flashcards/task/Flashcards-task_test.iml" group="FlashCards/Flashcards-task" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Chocolate/Problems-Chocolate.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Chocolate/Problems-Chocolate.iml" group="FlashCards/Problems-Chocolate" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Chocolate/Problems-Chocolate_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Chocolate/Problems-Chocolate_main.iml" group="FlashCards/Problems-Chocolate" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Chocolate/Problems-Chocolate_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Chocolate/Problems-Chocolate_test.iml" group="FlashCards/Problems-Chocolate" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/task/task.iml" filepath="$PROJECT_DIR$/.idea/modules/task/task.iml" group="FlashCards/task" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/task/task_main.iml" filepath="$PROJECT_DIR$/.idea/modules/task/task_main.iml" group="FlashCards/task" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/task/task_test.iml" filepath="$PROJECT_DIR$/.idea/modules/task/task_test.iml" group="FlashCards/task" />
