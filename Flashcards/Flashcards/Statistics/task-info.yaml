@@ -475,6 +475,22 @@ files:
         // just empty class, but not abstract so it can be run
     }
   learner_created: false
+- name: src/flashcards/Flashcards.java
+  visible: true
+  learner_created: true
+- name: src/flashcards/Action.java
+  visible: true
+  learner_created: true
+- name: testLog.txt
+  visible: true
+  learner_created: true
+- name: capitals.txt
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/44/stages/237/implement
-status: Unchecked
-record: -1
+status: Solved
+feedback:
+  message: Congratulations! Continue on <a href="https://hyperskill.org/projects/44/stages/237/implement">JetBrains
+    Academy</a>
+  time: Wed, 29 Jul 2020 10:46:23 UTC
+record: 6

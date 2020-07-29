@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.272s</div>
+<div class="counter">0.208s</div>
 <p>duration</p>
 </div>
 </td>
@@ -66,9 +66,6 @@
 <li>
 <a href="#tab1">Standard output</a>
 </li>
-<li>
-<a href="#tab2">Standard error</a>
-</li>
 </ul>
 <div id="tab0" class="tab">
 <h2>Tests</h2>
@@ -82,7 +79,7 @@
 </thead>
 <tr>
 <td class="success">start</td>
-<td class="success">0.272s</td>
+<td class="success">0.208s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -92,415 +89,207 @@
 <span class="code">
 <pre>?[1;31m
 Start test 1?[0m
-Input the action (add, remove, import, export, ask, exit):
-&gt; add
-The card:
-&gt; black
-The definition:
-&gt; white
-The pair (&quot;black&quot;:&quot;white&quot;) has been added.
-Input the action (add, remove, import, export, ask, exit):
-&gt; add
-The card:
-&gt; black
-The card &quot;black&quot; already exists.
-Input the action (add, remove, import, export, ask, exit):
-&gt; add
-The card:
-&gt; red
-The definition:
-&gt; white
-The definition &quot;white&quot; already exists.
-Input the action (add, remove, import, export, ask, exit):
-&gt; ask
-How many times to ask?
-&gt; 2
-Print the definition of &quot;black&quot;:
-&gt; white
-Correct answer.
-Print the definition of &quot;black&quot;:
-&gt; green
-Wrong answer. The correct one is &quot;white&quot;.
-Input the action (add, remove, import, export, ask, exit):
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+&gt; export
+File name:
+&gt; capitals.txt
+0 cards have been saved.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
 &gt; exit
 Bye bye!
 ?[1;31m
 Start test 2?[0m
-Input the action (add, remove, import, export, ask, exit):
-&gt; add
-The card:
-&gt; a brother of one's parent
-The definition:
-&gt; uncle
-The pair (&quot;a brother of one's parent&quot;:&quot;uncle&quot;) has been added.
-Input the action (add, remove, import, export, ask, exit):
-&gt; add
-The card:
-&gt; a part of the body where the foot and the leg meet
-The definition:
-&gt; ankle
-The pair (&quot;a part of the body where the foot and the leg meet&quot;:&quot;ankle&quot;) has been added.
-Input the action (add, remove, import, export, ask, exit):
-&gt; ask
-How many times to ask?
-&gt; 6
-Print the definition of &quot;a brother of one's parent&quot;:
-&gt; ankle
-Wrong answer. The correct one is &quot;uncle&quot;, you've just written the definition of &quot;a part of the body where the foot and the leg meet&quot;.
-Print the definition of &quot;a part of the body where the foot and the leg meet&quot;:
-&gt; ??
-Wrong answer. The correct one is &quot;ankle&quot;.
-Print the definition of &quot;a brother of one's parent&quot;:
-&gt; uncle
-Correct answer.
-Print the definition of &quot;a part of the body where the foot and the leg meet&quot;:
-&gt; ankle
-Correct answer.
-Print the definition of &quot;a brother of one's parent&quot;:
-&gt; ??
-Wrong answer. The correct one is &quot;uncle&quot;.
-Print the definition of &quot;a brother of one's parent&quot;:
-&gt; uncle
-Correct answer.
-Input the action (add, remove, import, export, ask, exit):
-&gt; exit
-Bye bye!
-?[1;31m
-Start test 3?[0m
-Input the action (add, remove, import, export, ask, exit):
-&gt; export
-File name:
-&gt; capitals.txt
-0 cards have been saved.
-Input the action (add, remove, import, export, ask, exit):
-&gt; export
-File name:
-&gt; capitalsNew.txt
-0 cards have been saved.
-Input the action (add, remove, import, export, ask, exit):
-&gt; exit
-Bye bye!
-?[1;31m
-Start test 4?[0m
-Input the action (add, remove, import, export, ask, exit):
-&gt; import
-File name:
-&gt; ghost_file.txt
-File not found.
-Input the action (add, remove, import, export, ask, exit):
-&gt; exit
-Bye bye!
-?[1;31m
-Start test 5?[0m
-Input the action (add, remove, import, export, ask, exit):
-&gt; add
-The card:
-&gt; Great Britain
-The definition:
-&gt; London
-The pair (&quot;Great Britain&quot;:&quot;London&quot;) has been added.
-Input the action (add, remove, import, export, ask, exit):
-&gt; remove
-The card:
-&gt; Wakanda
-Can't remove &quot;Wakanda&quot;: there is no such card.
-Input the action (add, remove, import, export, ask, exit):
-&gt; export
-File name:
-&gt; capitals.txt
-1 cards have been saved.
-Input the action (add, remove, import, export, ask, exit):
-&gt; import
-File name:
-&gt; capitals.txt
-1 cards have been loaded.
-Input the action (add, remove, import, export, ask, exit):
-&gt; ask
-How many times to ask?
-&gt; 1
-Print the definition of &quot;Great Britain&quot;:
-&gt; London
-Correct answer.
-Input the action (add, remove, import, export, ask, exit):
-&gt; export
-File name:
-&gt; capitalsNew.txt
-1 cards have been saved.
-Input the action (add, remove, import, export, ask, exit):
-&gt; exit
-Bye bye!
-?[1;31m
-Start test 6?[0m
-Input the action (add, remove, import, export, ask, exit):
-&gt; import
-File name:
-&gt; capitalsNew.txt
-1 cards have been loaded.
-Input the action (add, remove, import, export, ask, exit):
-&gt; exit
-Bye bye!
-?[1;31m
-Start test 7?[0m
-Input the action (add, remove, import, export, ask, exit):
-&gt; import
-File name:
-&gt; capitalsNew.txt
-1 cards have been loaded.
-Input the action (add, remove, import, export, ask, exit):
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+&gt; hardest card
+There are no cards with errors.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
 &gt; add
 The card:
 &gt; France
 The definition:
 &gt; Paris
 The pair (&quot;France&quot;:&quot;Paris&quot;) has been added.
-Input the action (add, remove, import, export, ask, exit):
+
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+&gt; ask
+How many times to ask?
+&gt; 2
+Print the definition of &quot;France&quot;:
+
+&gt; France
+Wrong answer. The correct one is &quot;Paris&quot;.
+
+Print the definition of &quot;France&quot;:
+
+&gt; ??
+Wrong answer. The correct one is &quot;Paris&quot;.
+
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+&gt; hardest card
+The hardest card is &quot;France&quot;. You have 2 errors answering it.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+&gt; reset stats
+Card statistics has been reset.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+&gt; hardest card
+There are no cards with errors.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
 &gt; add
 The card:
 &gt; Russia
 The definition:
 &gt; Moscow
 The pair (&quot;Russia&quot;:&quot;Moscow&quot;) has been added.
-Input the action (add, remove, import, export, ask, exit):
-&gt; remove
-The card:
-&gt; Great Britain
-The card has been removed.
-Input the action (add, remove, import, export, ask, exit):
-&gt; export
-File name:
-&gt; capitalsNew.txt
-2 cards have been saved.
-Input the action (add, remove, import, export, ask, exit):
-&gt; import
-File name:
-&gt; capitalsNew.txt
-2 cards have been loaded.
-Input the action (add, remove, import, export, ask, exit):
+
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
 &gt; ask
 How many times to ask?
-&gt; 4
-Print the definition of &quot;Russia&quot;:
-&gt; London
-Wrong answer. The correct one is &quot;Moscow&quot;.
-Print the definition of &quot;Russia&quot;:
-&gt; Paris
-Wrong answer. The correct one is &quot;Moscow&quot;, you've just written the definition of &quot;France&quot;.
-Print the definition of &quot;Russia&quot;:
-&gt; Moscow
-Correct answer.
+&gt; 2
 Print the definition of &quot;France&quot;:
-&gt; Paris
-Correct answer.
-Input the action (add, remove, import, export, ask, exit):
-&gt; exit
-Bye bye!
-?[1;31m
-Start test 8?[0m
-Input the action (add, remove, import, export, ask, exit):
-&gt; add
-The card:
-&gt; Japan
-The definition:
-&gt; Tokyo
-The pair (&quot;Japan&quot;:&quot;Tokyo&quot;) has been added.
-Input the action (add, remove, import, export, ask, exit):
-&gt; add
-The card:
-&gt; France
-The definition:
-&gt; UpdateMeFromImport
-The pair (&quot;France&quot;:&quot;UpdateMeFromImport&quot;) has been added.
-Input the action (add, remove, import, export, ask, exit):
-&gt; add
-The card:
-&gt; Russia
-The definition:
-&gt; UpdateMeFromImport2
-The pair (&quot;Russia&quot;:&quot;UpdateMeFromImport2&quot;) has been added.
-Input the action (add, remove, import, export, ask, exit):
-&gt; import
-File name:
-&gt; capitalsNew.txt
-2 cards have been loaded.
-Input the action (add, remove, import, export, ask, exit):
-&gt; ask
-How many times to ask?
-&gt; 3
-Print the definition of &quot;France&quot;:
-&gt; Tokyo
-Wrong answer. The correct one is &quot;Paris&quot;, you've just written the definition of &quot;Japan&quot;.
-Print the definition of &quot;Russia&quot;:
-&gt; Paris
-Wrong answer. The correct one is &quot;Moscow&quot;, you've just written the definition of &quot;France&quot;.
-Print the definition of &quot;Russia&quot;:
-&gt; Moscow
-Correct answer.
-Input the action (add, remove, import, export, ask, exit):
-&gt; remove
-The card:
-&gt; Japan
-The card has been removed.
-Input the action (add, remove, import, export, ask, exit):
-&gt; remove
-The card:
-&gt; Russia
-The card has been removed.
-Input the action (add, remove, import, export, ask, exit):
-&gt; export
-File name:
-&gt; capitalsNew.txt
-1 cards have been saved.
-Input the action (add, remove, import, export, ask, exit):
-&gt; exit
-Bye bye!
-?[1;31m
-Start test 9?[0m
-Input the action (add, remove, import, export, ask, exit):
-&gt; add
-The card:
-&gt; France
-The definition:
-&gt; UpdateMeFromImport
-The pair (&quot;France&quot;:&quot;UpdateMeFromImport&quot;) has been added.
-Input the action (add, remove, import, export, ask, exit):
-&gt; import
-File name:
-&gt; capitalsNew.txt
-1 cards have been loaded.
-Input the action (add, remove, import, export, ask, exit):
-&gt; ask
-How many times to ask?
-&gt; 1
-Print the definition of &quot;France&quot;:
-&gt; UpdateMeFromImport
+
+&gt; ??
 Wrong answer. The correct one is &quot;Paris&quot;.
-Input the action (add, remove, import, export, ask, exit):
+
+Print the definition of &quot;Russia&quot;:
+
+&gt; ??
+Wrong answer. The correct one is &quot;Moscow&quot;.
+
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+&gt; hardest card
+The hardest cards are &quot;France&quot;, &quot;Russia&quot;. You have 1 errors answering them.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+&gt; ask
+How many times to ask?
+&gt; 2
+Print the definition of &quot;France&quot;:
+
+&gt; ??
+Wrong answer. The correct one is &quot;Paris&quot;.
+
+Print the definition of &quot;France&quot;:
+
+&gt; ??
+Wrong answer. The correct one is &quot;Paris&quot;.
+
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+&gt; hardest card
+The hardest card is &quot;France&quot;. You have 3 errors answering it.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+&gt; ask
+How many times to ask?
+&gt; 2
+Print the definition of &quot;Russia&quot;:
+
+&gt; ??
+Wrong answer. The correct one is &quot;Moscow&quot;.
+
+Print the definition of &quot;France&quot;:
+
+&gt; ??
+Wrong answer. The correct one is &quot;Paris&quot;.
+
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+&gt; hardest card
+The hardest card is &quot;France&quot;. You have 4 errors answering it.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+&gt; ask
+How many times to ask?
+&gt; 2
+Print the definition of &quot;Russia&quot;:
+
+&gt; ??
+Wrong answer. The correct one is &quot;Moscow&quot;.
+
+Print the definition of &quot;France&quot;:
+
+&gt; ??
+Wrong answer. The correct one is &quot;Paris&quot;.
+
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+&gt; hardest card
+The hardest card is &quot;France&quot;. You have 5 errors answering it.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+&gt; ask
+How many times to ask?
+&gt; 2
+Print the definition of &quot;France&quot;:
+
+&gt; ??
+Wrong answer. The correct one is &quot;Paris&quot;.
+
+Print the definition of &quot;Russia&quot;:
+
+&gt; ??
+Wrong answer. The correct one is &quot;Moscow&quot;.
+
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+&gt; hardest card
+The hardest card is &quot;France&quot;. You have 6 errors answering it.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+&gt; export
+File name:
+&gt; capitals.txt
+2 cards have been saved.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+&gt; log
+File name:
+&gt; testLog.txt
+The log has been saved.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
 &gt; exit
 Bye bye!
 ?[1;31m
-Start test 10?[0m
-Input the action (add, remove, import, export, ask, exit):
+Start test 3?[0m
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+&gt; hardest card
+There are no cards with errors.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
 &gt; add
 The card:
-&gt; a
+&gt; France
 The definition:
-&gt; 1
-The pair (&quot;a&quot;:&quot;1&quot;) has been added.
-Input the action (add, remove, import, export, ask, exit):
-&gt; add
-The card:
-&gt; b
-The definition:
-&gt; 2
-The pair (&quot;b&quot;:&quot;2&quot;) has been added.
-Input the action (add, remove, import, export, ask, exit):
-&gt; add
-The card:
-&gt; c
-The definition:
-&gt; 3
-The pair (&quot;c&quot;:&quot;3&quot;) has been added.
-Input the action (add, remove, import, export, ask, exit):
-&gt; add
-The card:
-&gt; b
-The card &quot;b&quot; already exists.
-Input the action (add, remove, import, export, ask, exit):
-&gt; add
-The card:
-&gt; c
-The card &quot;c&quot; already exists.
-Input the action (add, remove, import, export, ask, exit):
-&gt; add
-The card:
-&gt; d
-The definition:
-&gt; 4
-The pair (&quot;d&quot;:&quot;4&quot;) has been added.
-Input the action (add, remove, import, export, ask, exit):
-&gt; remove
-The card:
-&gt; c
-The card has been removed.
-Input the action (add, remove, import, export, ask, exit):
-&gt; remove
-The card:
-&gt; xxxx
-Can't remove &quot;xxxx&quot;: there is no such card.
-Input the action (add, remove, import, export, ask, exit):
-&gt; add
-The card:
-&gt; c
-The definition:
-&gt; 5
-The pair (&quot;c&quot;:&quot;5&quot;) has been added.
-Input the action (add, remove, import, export, ask, exit):
-&gt; add
-The card:
-&gt; new card
-The definition:
-&gt; 4
-The definition &quot;4&quot; already exists.
-Input the action (add, remove, import, export, ask, exit):
-&gt; add
-The card:
-&gt; f
-The definition:
-&gt; 5
-The definition &quot;5&quot; already exists.
-Input the action (add, remove, import, export, ask, exit):
-&gt; remove
-The card:
-&gt; c
-The card has been removed.
-Input the action (add, remove, import, export, ask, exit):
-&gt; remove
-The card:
-&gt; d
-The card has been removed.
-Input the action (add, remove, import, export, ask, exit):
+&gt; UpdateMeFromImport
+The pair (&quot;France&quot;:&quot;UpdateMeFromImport&quot;) has been added.
+
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
 &gt; ask
 How many times to ask?
-&gt; 7
-Print the definition of &quot;a&quot;:
-&gt; 1
-Correct answer.
-Print the definition of &quot;a&quot;:
 &gt; 2
-Wrong answer. The correct one is &quot;1&quot;, you've just written the definition of &quot;b&quot;.
-Print the definition of &quot;a&quot;:
-&gt; 3
-Wrong answer. The correct one is &quot;1&quot;.
-Print the definition of &quot;a&quot;:
-&gt; 4
-Wrong answer. The correct one is &quot;1&quot;.
-Print the definition of &quot;b&quot;:
-&gt; 3
-Wrong answer. The correct one is &quot;2&quot;.
-Print the definition of &quot;b&quot;:
-&gt; 2
-Correct answer.
-Print the definition of &quot;b&quot;:
-&gt; 1
-Wrong answer. The correct one is &quot;2&quot;, you've just written the definition of &quot;a&quot;.
-Input the action (add, remove, import, export, ask, exit):
-&gt; ask
-How many times to ask?
-&gt; 1
-Print the definition of &quot;b&quot;:
-&gt; 2
-Correct answer.
-Input the action (add, remove, import, export, ask, exit):
+Print the definition of &quot;France&quot;:
+
+&gt; ??
+Wrong answer. The correct one is &quot;UpdateMeFromImport&quot;.
+
+Print the definition of &quot;France&quot;:
+
+&gt; ??
+Wrong answer. The correct one is &quot;UpdateMeFromImport&quot;.
+
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+&gt; import
+File name:
+&gt; capitals.txt
+2 cards have been loaded.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+&gt; hardest card
+The hardest card is &quot;France&quot;. You have 6 errors answering it.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+&gt; remove
+The card:
+&gt; France
+The card has been removed.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+&gt; remove
+The card:
+&gt; Russia
+The card has been removed.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+&gt; hardest card
+There are no cards with errors.
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
 &gt; exit
 Bye bye!
-</pre>
-</span>
-</div>
-<div id="tab2" class="tab">
-<h2>Standard error</h2>
-<span class="code">
-<pre>Error while trying to import cards from file: 'ghost_file.txt'.
-Error msg: ghost_file.txt (The system cannot find the file specified)
 </pre>
 </span>
 </div>
@@ -512,7 +301,7 @@ Error msg: ghost_file.txt (The system cannot find the file specified)
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 5.3.1</a> at Jul 28, 2020, 7:27:41 PM</p>
+<a href="http://www.gradle.org">Gradle 5.3.1</a> at Jul 29, 2020, 12:46:23 PM</p>
 </div>
 </div>
 </body>
