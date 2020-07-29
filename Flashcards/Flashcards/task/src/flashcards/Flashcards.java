@@ -5,21 +5,37 @@ import java.io.FileReader;
 import java.io.PrintWriter;
 import java.util.*;
 
+@SuppressWarnings("OptionalUsedAsFieldOrParameterType")
 public class Flashcards {
     private final LinkedHashMap<String, String> termsAndDefinitions;
     private final LinkedHashMap<String, Integer> cardsAndErrors;
     private final Scanner scanner;
     private final ArrayList<String> logsArray;
+    private final Optional<String> importFile;
+    private final Optional<String> exportFile;
 
-    public Flashcards() {
+    public Flashcards(String[] args) {
         this.termsAndDefinitions = new LinkedHashMap<>();
         this.cardsAndErrors = new LinkedHashMap<>();
         this.scanner = new Scanner(System.in);
         this.logsArray = new ArrayList<>();
+
+        List<String> arguments = Arrays.asList(args);
+        if (arguments.contains("-import")) {
+            this.importFile = Optional.of(arguments.get(arguments.indexOf("-import") + 1));
+        } else {
+            this.importFile = Optional.empty();
+        }
+        if (arguments.contains("-export")) {
+            this.exportFile = Optional.of(arguments.get(arguments.indexOf("-export") + 1));
+        } else {
+            this.exportFile = Optional.empty();
+        }
     }
 
     public void run() {
         Action userAction = null;
+        importFile.ifPresent(this::importCardsFromFile);
         while(!Objects.equals(userAction, Action.EXIT)) {
             userAction = getActionFromUser();
             switch (userAction) {
@@ -50,6 +66,7 @@ public class Flashcards {
                 default: // Exit
                     scanner.close();
                     printlnAndLogIt("Bye bye!");
+                    exportFile.ifPresent(this::exportCardsToFile);
                     break;
             }
         }
@@ -175,6 +192,21 @@ public class Flashcards {
         }
     }
 
+    private void exportCardsToFile(String fileName) {
+        try (PrintWriter printWriter = new PrintWriter(fileName)) {
+            printWriter.println(termsAndDefinitions.size());
+            termsAndDefinitions.forEach((cardTerm,cardDefinition) -> {
+                printWriter.println(cardTerm);
+                printWriter.println(cardDefinition);
+                printWriter.println(cardsAndErrors.getOrDefault(cardTerm, 0));
+            });
+            printlnAndLogIt(termsAndDefinitions.size() + " cards have been saved.");
+        } catch (Exception e) {
+            System.err.printf("Error while trying to export cards to file: '%s'.%n",fileName);
+            System.err.println("Error msg: " + e.getMessage());
+        }
+    }
+
     /*
     Imported file must have following format:
     first line: number n -> number of cards in the file
@@ -197,6 +229,24 @@ public class Flashcards {
     private void importCardsFromFile() {
         printlnAndLogIt("File name:");
         String fileName = nextLineAndLogIt().trim();
+        try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
+            int cardsToRead = Integer.parseInt(br.readLine().trim());
+            for (int i = 0; i < cardsToRead; i++) {
+                String cardTerm = br.readLine().trim();
+                String cardDefinition = br.readLine().trim();
+                termsAndDefinitions.put(cardTerm, cardDefinition);
+                String cardErrors = br.readLine().trim();
+                cardsAndErrors.put(cardTerm, Integer.parseInt(cardErrors));
+            }
+            printlnAndLogIt(cardsToRead + " cards have been loaded.");
+        } catch (Exception e) {
+            printlnAndLogIt("File not found.");
+            System.err.printf("Error while trying to import cards from file: '%s'.%n",fileName);
+            System.err.println("Error msg: " + e.getMessage());
+        }
+    }
+
+    private void importCardsFromFile(String fileName) {
         try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
             int cardsToRead = Integer.parseInt(br.readLine().trim());
             for (int i = 0; i < cardsToRead; i++) {
@@ -306,6 +356,4 @@ public class Flashcards {
         System.out.println(line);
         logsArray.add(line);
     }
-
 }
-
