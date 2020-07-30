@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/WebCrawler.iml" filepath="$PROJECT_DIR$/.idea/modules/WebCrawler.iml" group="WebCrawler" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Web Crawler/task/Web_Crawler-task.iml" filepath="$PROJECT_DIR$/.idea/modules/Web Crawler/task/Web_Crawler-task.iml" group="WebCrawler/Web_Crawler-task" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Web Crawler/task/Web_Crawler-task_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Web Crawler/task/Web_Crawler-task_main.iml" group="WebCrawler/Web_Crawler-task" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Web Crawler/task/Web_Crawler-task_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Web Crawler/task/Web_Crawler-task_test.iml" group="WebCrawler/Web_Crawler-task" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/util.iml" filepath="$PROJECT_DIR$/.idea/modules/util/util.iml" group="WebCrawler/util" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/util_main.iml" filepath="$PROJECT_DIR$/.idea/modules/util/util_main.iml" group="WebCrawler/util" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/util_test.iml" filepath="$PROJECT_DIR$/.idea/modules/util/util_test.iml" group="WebCrawler/util" />
+    </modules>
+  </component>
+</project>
