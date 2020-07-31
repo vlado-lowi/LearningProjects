@@ -4,9 +4,7 @@ import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
-import java.io.BufferedInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
@@ -30,8 +28,11 @@ public class WebCrawler extends JFrame {
         runButton.setName("RunButton");
         runButton.setText("Get text!");
 
+        JLabel urlLabel = new JLabel("URL:");
+
         JPanel upperControlPanel = new JPanel();
         upperControlPanel.setBorder(new EmptyBorder(5,5,5,5));
+        upperControlPanel.add(urlLabel);
         upperControlPanel.add(urlTextField);
         upperControlPanel.add(runButton);
         add(upperControlPanel, BorderLayout.NORTH);
@@ -62,6 +63,31 @@ public class WebCrawler extends JFrame {
 
         add(middleAreaPanel, BorderLayout.CENTER);
 
+        JLabel exportLabel = new JLabel("Export:");
+        JTextField exportTextField = new JTextField(30);
+        exportTextField.setName("ExportUrlTextField");
+        JButton exportButton = new JButton("Save");
+        exportButton.setName("ExportButton");
+        JPanel bottomPanel = new JPanel();
+        bottomPanel.add(exportLabel);
+        bottomPanel.add(exportTextField);
+        bottomPanel.add(exportButton);
+
+        add(bottomPanel, BorderLayout.SOUTH);
+
+        exportButton.addActionListener(actionEvent -> {
+            // read export file name
+            String exportFileName = exportTextField.getText();
+            try (PrintWriter printWriter = new PrintWriter(new FileWriter(exportFileName))) {
+                for (int i = 0; i < tableModel.getRowCount(); i++) {
+                    printWriter.println(tableModel.getValueAt(i, 0));
+                    printWriter.println(tableModel.getValueAt(i, 1));
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+
         runButton.addActionListener( actionEvent -> {
             // clear table
             tableModel.setRowCount(0);
@@ -69,6 +95,9 @@ public class WebCrawler extends JFrame {
             InputStream inputStream = null;
             try {
                 URLConnection connection = new URL(url).openConnection();
+                // make bot look kinda like human using win 10 and firefox browser
+                connection.setRequestProperty("User-Agent",
+                        "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0");
                 if (Objects.equals(connection.getContentType(), "text/html")) {
                     inputStream = new BufferedInputStream(connection.getInputStream());
                     String siteHtml = new String(inputStream.readAllBytes(),StandardCharsets.UTF_8);
