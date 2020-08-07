@@ -11,6 +11,11 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Problems/Countdown counter" />
+            <option value="$PROJECT_DIR$/Problems/Counting number of instances" />
+            <option value="$PROJECT_DIR$/Problems/Multithreaded counter" />
+            <option value="$PROJECT_DIR$/Problems/The LIFO principle in action" />
+            <option value="$PROJECT_DIR$/Problems/Which brackets are balanced" />
             <option value="$PROJECT_DIR$/Web Crawler/task" />
             <option value="$PROJECT_DIR$/util" />
           </set>

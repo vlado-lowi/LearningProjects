@@ -2,13 +2,28 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/WebCrawler.iml" filepath="$PROJECT_DIR$/.idea/modules/WebCrawler.iml" group="WebCrawler" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Web Crawler/task/Web_Crawler-task.iml" filepath="$PROJECT_DIR$/.idea/modules/Web Crawler/task/Web_Crawler-task.iml" group="WebCrawler/Web_Crawler-task" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Web Crawler/task/Web_Crawler-task_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Web Crawler/task/Web_Crawler-task_main.iml" group="WebCrawler/Web_Crawler-task" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Web Crawler/task/Web_Crawler-task_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Web Crawler/task/Web_Crawler-task_test.iml" group="WebCrawler/Web_Crawler-task" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/util.iml" filepath="$PROJECT_DIR$/.idea/modules/util/util.iml" group="WebCrawler/util" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/util_main.iml" filepath="$PROJECT_DIR$/.idea/modules/util/util_main.iml" group="WebCrawler/util" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/util_test.iml" filepath="$PROJECT_DIR$/.idea/modules/util/util_test.iml" group="WebCrawler/util" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/WebCrawler.iml" filepath="$PROJECT_DIR$/.idea/modules/WebCrawler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Countdown counter/WebCrawler.Problems-Countdown_counter.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Countdown counter/WebCrawler.Problems-Countdown_counter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Countdown counter/WebCrawler.Problems-Countdown_counter.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Countdown counter/WebCrawler.Problems-Countdown_counter.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Countdown counter/WebCrawler.Problems-Countdown_counter.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Countdown counter/WebCrawler.Problems-Countdown_counter.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Counting number of instances/WebCrawler.Problems-Counting_number_of_instances.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Counting number of instances/WebCrawler.Problems-Counting_number_of_instances.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Counting number of instances/WebCrawler.Problems-Counting_number_of_instances.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Counting number of instances/WebCrawler.Problems-Counting_number_of_instances.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Counting number of instances/WebCrawler.Problems-Counting_number_of_instances.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Counting number of instances/WebCrawler.Problems-Counting_number_of_instances.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Multithreaded counter/WebCrawler.Problems-Multithreaded_counter.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Multithreaded counter/WebCrawler.Problems-Multithreaded_counter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Multithreaded counter/WebCrawler.Problems-Multithreaded_counter.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Multithreaded counter/WebCrawler.Problems-Multithreaded_counter.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Multithreaded counter/WebCrawler.Problems-Multithreaded_counter.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Multithreaded counter/WebCrawler.Problems-Multithreaded_counter.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/The LIFO principle in action/WebCrawler.Problems-The_LIFO_principle_in_action.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/The LIFO principle in action/WebCrawler.Problems-The_LIFO_principle_in_action.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/The LIFO principle in action/WebCrawler.Problems-The_LIFO_principle_in_action.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/The LIFO principle in action/WebCrawler.Problems-The_LIFO_principle_in_action.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/The LIFO principle in action/WebCrawler.Problems-The_LIFO_principle_in_action.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/The LIFO principle in action/WebCrawler.Problems-The_LIFO_principle_in_action.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Which brackets are balanced/WebCrawler.Problems-Which_brackets_are_balanced.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Which brackets are balanced/WebCrawler.Problems-Which_brackets_are_balanced.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Which brackets are balanced/WebCrawler.Problems-Which_brackets_are_balanced.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Which brackets are balanced/WebCrawler.Problems-Which_brackets_are_balanced.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Problems/Which brackets are balanced/WebCrawler.Problems-Which_brackets_are_balanced.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Problems/Which brackets are balanced/WebCrawler.Problems-Which_brackets_are_balanced.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Web Crawler/task/WebCrawler.Web_Crawler-task.iml" filepath="$PROJECT_DIR$/.idea/modules/Web Crawler/task/WebCrawler.Web_Crawler-task.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Web Crawler/task/WebCrawler.Web_Crawler-task.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Web Crawler/task/WebCrawler.Web_Crawler-task.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Web Crawler/task/WebCrawler.Web_Crawler-task.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Web Crawler/task/WebCrawler.Web_Crawler-task.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/WebCrawler.util.iml" filepath="$PROJECT_DIR$/.idea/modules/util/WebCrawler.util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/WebCrawler.util.main.iml" filepath="$PROJECT_DIR$/.idea/modules/util/WebCrawler.util.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/WebCrawler.util.test.iml" filepath="$PROJECT_DIR$/.idea/modules/util/WebCrawler.util.test.iml" />
     </modules>
   </component>
 </project>

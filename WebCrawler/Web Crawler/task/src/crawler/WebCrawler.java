@@ -18,71 +18,87 @@ public class WebCrawler extends JFrame {
     public WebCrawler() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(300, 300);
-        setLayout(new BorderLayout(5,5));
+        setLayout(new BoxLayout(this.getContentPane(), BoxLayout.PAGE_AXIS));
 
-        JTextField urlTextField = new JTextField();
+//        START URL
+        JLabel urlLabel = new JLabel(String.format("%-30s", "URL:"));
+        JTextField urlTextField = new JTextField(30);
         urlTextField.setName("UrlTextField");
-        urlTextField.setColumns(30);
-
-        JButton runButton = new JButton();
+        JButton runButton = new JButton("Run");
         runButton.setName("RunButton");
-        runButton.setText("Get text!");
-
-        JLabel urlLabel = new JLabel("URL:");
-
-        JPanel upperControlPanel = new JPanel();
-        upperControlPanel.setBorder(new EmptyBorder(5,5,5,5));
-        upperControlPanel.add(urlLabel);
-        upperControlPanel.add(urlTextField);
-        upperControlPanel.add(runButton);
-        add(upperControlPanel, BorderLayout.NORTH);
+        JPanel urlPanel = new JPanel();
+        urlPanel.setBorder(new EmptyBorder(5,5,5,5));
+        urlPanel.add(urlLabel);
+        urlPanel.add(urlTextField);
+        urlPanel.add(runButton);
+        add(urlPanel);
 
 
-        JLabel titleLabel = new JLabel();
-        titleLabel.setName("TitleLabel");
+//        WORKERS
+        JLabel workersLabel = new JLabel(String.format("%-30s","Workers:"));
+        JTextField workersField = new JTextField(30);
+        JPanel workersPanel = new JPanel();
+        workersPanel.setBorder(new EmptyBorder(5,5,5,5));
+        workersPanel.add(workersLabel);
+        workersPanel.add(workersField);
+        add(workersPanel);
 
-        JPanel middleAreaPanel = new JPanel();
-        middleAreaPanel.setBorder(new EmptyBorder(10, 10, 10, 10));
-        middleAreaPanel.setLayout(new BorderLayout(5,5));
-        middleAreaPanel.add(titleLabel, BorderLayout.NORTH);
+//        MAXIMUM DEPTH
+        JLabel maxDepthLabel = new JLabel(String.format("%-30s","Maximum depth:"));
+        JTextField maxDepthField = new JTextField(30);
+        maxDepthField.setName("DepthTextField");
+        JCheckBox maxDepthEnabled = new JCheckBox("Enabled", false);
+        maxDepthEnabled.setName("DepthCheckBox");
+        JPanel depthPanel = new JPanel();
+        depthPanel.setBorder(new EmptyBorder(5,5,5,5));
+        depthPanel.add(maxDepthLabel);
+        depthPanel.add(maxDepthField);
+        depthPanel.add(maxDepthEnabled);
+        add(depthPanel);
 
-        String[] columnNames = {"URL", "Title"};
-        int numRows = 0 ;
-        // create table model
-        DefaultTableModel tableModel = new DefaultTableModel(numRows, columnNames.length) ;
-        tableModel.setColumnIdentifiers(columnNames);
-        // create table based on the model
-        JTable titlesTable = new JTable(tableModel);
-        titlesTable.setName("TitlesTable");
-        // user cannot edit table
-        titlesTable.setEnabled(false);
-        // add table to scroll pane so you can scroll it and see column names at all times
-        JScrollPane scrollPane = new JScrollPane(titlesTable);
-        titlesTable.setFillsViewportHeight(true);
-        middleAreaPanel.add(scrollPane, BorderLayout.CENTER);
+//        TIME LIMIT
+        JLabel timeLabel = new JLabel(String.format("%-30s","Time limit:"));
+        JTextField timeField = new JTextField(30);
+        JLabel secondsLabel = new JLabel("seconds");
+        JCheckBox timeEnabled = new JCheckBox("Enabled", false);
+        JPanel timePanel = new JPanel();
+        timePanel.setBorder(new EmptyBorder(5,5,5,5));
+        timePanel.add(timeLabel);
+        timePanel.add(timeField);
+        timePanel.add(secondsLabel);
+        timePanel.add(timeEnabled);
+        add(timePanel);
 
-        add(middleAreaPanel, BorderLayout.CENTER);
+//       todo ELAPSED TIME
 
-        JLabel exportLabel = new JLabel("Export:");
+//       PARSED PAGES
+        JLabel parsedLabel = new JLabel(String.format("%-30s","Parsed pages:"));
+        JLabel parsedPages = new JLabel("0");
+        parsedPages.setName("ParsedLabel");
+        JPanel parsedPanel = new JPanel();
+        parsedLabel.setBorder(new EmptyBorder(5,5,5,5));
+        parsedPanel.add(parsedLabel);
+        parsedPanel.add(parsedPages);
+        add(parsedPanel);
+
+//        EXPORT
+        JLabel exportLabel = new JLabel(String.format("%-30s","Export:"));
         JTextField exportTextField = new JTextField(30);
         exportTextField.setName("ExportUrlTextField");
         JButton exportButton = new JButton("Save");
         exportButton.setName("ExportButton");
-        JPanel bottomPanel = new JPanel();
-        bottomPanel.add(exportLabel);
-        bottomPanel.add(exportTextField);
-        bottomPanel.add(exportButton);
-
-        add(bottomPanel, BorderLayout.SOUTH);
+        JPanel exportPanel = new JPanel();
+        exportPanel.setBorder(new EmptyBorder(5,5,5,5));
+        exportPanel.add(exportLabel);
+        exportPanel.add(exportTextField);
+        exportPanel.add(exportButton);
+        add(exportPanel);
 
         exportButton.addActionListener(actionEvent -> {
             // read export file name
             String exportFileName = exportTextField.getText();
             try (PrintWriter printWriter = new PrintWriter(new FileWriter(exportFileName))) {
-                for (int i = 0; i < tableModel.getRowCount(); i++) {
-                    printWriter.println(tableModel.getValueAt(i, 0));
-                    printWriter.println(tableModel.getValueAt(i, 1));
-                }
+                // todo export to file
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -90,7 +106,7 @@ public class WebCrawler extends JFrame {
 
         runButton.addActionListener( actionEvent -> {
             // clear table
-            tableModel.setRowCount(0);
+//            tableModel.setRowCount(0);
             final String url = urlTextField.getText(); // initial user URL
             InputStream inputStream = null;
             try {
@@ -102,8 +118,8 @@ public class WebCrawler extends JFrame {
                     inputStream = new BufferedInputStream(connection.getInputStream());
                     String siteHtml = new String(inputStream.readAllBytes(),StandardCharsets.UTF_8);
                     String siteTitle = getTitleFromSiteHtml(siteHtml);
-                    titleLabel.setText(siteTitle); // title of initial user URL
-                    tableModel.addRow(new String[]{url, siteTitle}); // add it to table also
+//                    titleLabel.setText(siteTitle); // title of initial user URL
+//                    tableModel.addRow(new String[]{url, siteTitle}); // add it to table also
                     // pattern matches links inside a tags eg.: <a href="myLink.com">
                     Pattern pattern = Pattern.compile("<a.*?href=[\"'](.*?)['\"].*?>",
                             Pattern.CASE_INSENSITIVE);
@@ -111,7 +127,7 @@ public class WebCrawler extends JFrame {
                     while (matcher.find()) { // for all links found
                         Optional<Object[]> helper = getUrlAndTitle(matcher.group(1), url);
                         // if url is correct and title was found add it to table
-                        helper.ifPresent(tableModel::addRow);
+//                        helper.ifPresent(tableModel::addRow);
                     }
                     pack();
                 }
