@@ -467,6 +467,24 @@ files:
         }
     }
   learner_created: false
+- name: src/crawler/UrlFinder.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/59/stages/322/implement
-status: Unchecked
+status: Failed
+feedback:
+  message: |-
+    Wrong answer in test #17
+
+    File your app saves has a wrong lines number
+
+    Please find below the output of your program during this failed test.
+
+    ---
+
+    Processing this url: http://localhost:25555/exampleDotCom
+    max depth = 1
+    Processing this url: http://localhost:25555/circular1
+    max depth = 1
+  time: Tue, 18 Aug 2020 14:59:19 UTC
 record: -1

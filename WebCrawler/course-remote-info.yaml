@@ -34,8 +34,6 @@ topics:
     theory_id: 1945
   - title: Generic programming
     theory_id: 3492
-  - title: Functional interfaces and lambda expressions
-    theory_id: 3601
   - title: The basic window in Swing
     theory_id: 5514
   - title: Swing components
@@ -138,6 +136,8 @@ topics:
     theory_id: 3564
   - title: Boxing and unboxing
     theory_id: 3595
+  - title: Functional interfaces and lambda expressions
+    theory_id: 3601
   1:
   - title: What are streams
     theory_id: 5533
@@ -183,6 +183,8 @@ topics:
   3:
   - title: Computer algorithms
     theory_id: 4953
+  - title: Introducing the first algorithm
+    theory_id: 10336
   - title: The big O notation
     theory_id: 4991
   - title: Data structures
